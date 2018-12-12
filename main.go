@@ -42,6 +42,7 @@ func main() {
 	e := echo.New()
 	e.Use(middleware.Logger())
 	e.POST("/send", SendMsg)
+	e.GET("/health", Health)
 
 	port := Config.GetValue("http", "port")
 	address := Config.GetValue("http", "address")
@@ -50,6 +51,10 @@ func main() {
 	} else {
 		e.Logger.Fatal(e.Start(address + ":" + port))
 	}
+}
+
+func Health(ctx echo.Context) error {
+	return ctx.String(200, "ok")
 }
 
 //SendMsg 接受发送请求
