@@ -59,7 +59,7 @@
 ```
 
 ### 使用
-> 1. clone 文件 `git clone https://www.github.com/yanjunhui/chat.git`
+> 1. clone 文件 `git clone https://www.github.com/liuxc0116/chat.git`
 > 2. 打开目录 `cd chat`
 > 3. 启动 `./control.sh start`
 > 4. 停止 `./control.sh stop`
